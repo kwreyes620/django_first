@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '!e16qatfbdu($jxv_0e=i=uba%!w!(
 # Added for Deployment
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['floating-lowlands-71822.herokuapp.com']
+ALLOWED_HOSTS = ['floating-lowlands-71822.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -79,18 +79,20 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_first.wsgi.application'
+#WSGI_APPLICATION = 'django_first.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -101,7 +103,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -149,7 +151,7 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = 'blog-home'
-LOGIN_URL = 'login'
+#CRISPY_TEMPLATE_PACK = 'bootstrap4'
+#LOGIN_REDIRECT_URL = 'blog-home'
+#LOGIN_URL = 'login'
 
