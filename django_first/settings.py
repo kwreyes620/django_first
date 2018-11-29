@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '!e16qatfbdu($jxv_0e=i=uba%!w!(
 # Added for Deployment
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['floating-lowlands-71822.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['floating-lowlands-71822.herokuapp.com']
 
 
 # Application definition
