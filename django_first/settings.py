@@ -152,9 +152,9 @@ STATIC_URL = '/Static/'
 
 # collect extra static files 
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'Static'),
-)
+STATICFILES_DIRS = None #(
+#    os.path.join(BASE_DIR, 'Static'),
+#)
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
